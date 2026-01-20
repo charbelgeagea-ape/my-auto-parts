@@ -10,16 +10,7 @@ collections:
     label: "Auto Parts"
     folder: "parts"
     create: true
-    slug: "{{slug}}"
     fields:
       - {label: "Part Name", name: "title", widget: "string"}
       - {label: "Price", name: "price", widget: "string"}
-      - {label: "Description", name: "body", widget: "markdown"}
       - {label: "Image", name: "image", widget: "image"}
-    slug: "{{slug}}"
-    fields:
-      - {label: "Part Name", name: "title", widget: "string"}
-      - {label: "Price", name: "price", widget: "string"}
-      - {label: "Description", name: "body", widget: "markdown"}
-      - {label: "Image", name: "image", widget: "image"}
-
