@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Parts Express - Lebanon</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; display: flex; flex-direction: column; height: 100vh; background: #f4f4f4; }
+        
+        /* Top Header */
+        .header { background: #d63031; color: white; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+        
+        /* Search Bar Area */
+        .search-container { background: white; padding: 20px; text-align: center; border-bottom: 1px solid #ddd; }
+        .search-container input { width: 60%; padding: 12px; border: 1px solid #ccc; border-radius: 5px; }
+        .search-container button { padding: 12px 25px; background: #d63031; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
+
+        /* Layout */
+        .main-container { display: flex; flex: 1; }
+
+        /* Sidebar - The Combined Version */
+        .sidebar { width: 220px; background: white; padding: 20px; border-right: 1px solid #ddd; height: calc(100vh - 150px); overflow-y: auto; }
+        .sidebar h3 { font-size: 1.1rem; margin-bottom: 15px; color: #333; }
+        .sidebar label { display: block; margin-bottom: 8px; font-size: 0.9rem; cursor: pointer; }
+
+        /* Product Grid */
+        .results { flex: 1; display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; padding: 20px; overflow-y: auto; }
+        
+        /* Part Cards */
+        .part-card { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); display: flex; flex-direction: column; }
+        .img-placeholder { width: 100%; height: 200px; background: #e1e1e1; border-radius: 8px; margin-bottom: 15px; display: flex; align-items: center; justify-content: center; color: #666; font-size: 0.9rem; font-weight: bold; overflow: hidden; }
+        .img-placeholder img { width: 100%; height: 100%; object-fit: cover; }
+        .price { color: #d63031; font-weight: bold; font-size: 1.3rem; margin: 10px 0; }
+        .btn { display: block; text-align: center; background: #d63031; color: white; padding: 10px; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: auto; }
+        .btn:hover { background: #b32626; }
+
+        /* WhatsApp Button */
+        .wa-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h2 style="margin:0;">AUTO PARTS EXPRESS</h2>
+        <span>📞 +961 78846192</span>
+    </div>
+
+    <div class="search-container">
+        <div style="margin-bottom: 10px; font-size: 0.9rem; color: #555;">Find parts by Name, Serial Number, or Chassis VIN</div>
+        <input type="text" placeholder="e.g. WDB211, Brake Pads, SN-9920...">
+        <button>SEARCH</button>
+    </div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <h3>Brands</h3>
+            <label><input type="checkbox"> Toyota</label>
+            <label><input type="checkbox"> Mercedes-Benz</label>
+            <label><input type="checkbox"> BMW</label>
+            <label><input type="checkbox"> Kia</label>
+            <label><input type="checkbox"> Hyundai</label>
+            <label><input type="checkbox"> Nissan</label>
+            <label><input type="checkbox"> Honda</label>
+            <label><input type="checkbox"> Mitsubishi</label>
+            <label><input type="checkbox"> Renault</label>
+            <label><input type="checkbox"> Volkswagen</label>
+            <hr>
+            <h3>Category</h3>
+            <label><input type="checkbox"> Engine</label>
+            <label><input type="checkbox"> Brakes</label>
+            <label><input type="checkbox"> Suspension</label>
+            <label><input type="checkbox"> Electrical & Lights</label>
+            <label><input type="checkbox"> Filters</label>
+            <label><input type="checkbox"> Interior</label>
+        </div>
+
+        <div class="results">
+            <div class="part-card">
+                <div class="img-placeholder">IMAGE: gasket.jpg</div>
+                <h4 style="margin: 0;">Cylinder Head Gasket</h4>
+                <p style="color: #666; font-size: 0.8rem; margin: 5px 0;">Serial: <b>61-34255-00</b></p>
+                <p style="font-size: 0.85rem; color: #444;">Victor Reinz quality. Fits Mercedes M271 engines.</p>
+                <div class="price">$35.00</div>
+                <a href="order.html" class="btn">ORDER NOW</a>
+            </div>
+
+            <div class="part-card">
+                <div class="img-placeholder">IMAGE: brakes.jpg</div>
+                <h4 style="margin: 0;">Front Brake Pads</h4>
+                <p style="color: #666; font-size: 0.8rem; margin: 5px 0;">Serial: <b>A0044208720</b></p>
+                <p style="font-size: 0.85rem; color: #444;">Ceramic pads for Mercedes E-Class (W211).</p>
+                <div class="price">$45.00</div>
+                <a href="order.html" class="btn">ORDER NOW</a>
+            </div>
+
+            <div class="part-card">
+                <div class="img-placeholder">IMAGE: oil-filter.jpg</div>
+                <h4 style="margin: 0;">Genuine Oil Filter</h4>
+                <p style="color: #666; font-size: 0.8rem; margin: 5px 0;">Serial: <b>11427566327</b></p>
+                <p style="font-size: 0.85rem; color: #444;">Fits BMW N52/N54 engines. German quality.</p>
+                <div class="price">$15.00</div>
+                <a href="order.html" class="btn">ORDER NOW</a>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://wa.me/96178846192" class="wa-float">💬 WhatsApp Us</a>
+
+</body>
+</html>
